@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Peacock Dental Clinic</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Peacock Dental Clinic" />
+    <meta property="og:title" content="Services - Peacock Dental Clinic" />
+    <meta property="og:image" content="https://peacockdentalclinic.netlify.app/logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://peacockdentalclinic.netlify.app/services.html" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://peacockdentalclinic.netlify.app/#website",
+          "url": "https://peacockdentalclinic.netlify.app/",
+          "name": "Peacock Dental Clinic",
+          "alternateName": ["Peacock Dental", "Peacock Dental Ethiopia"]
+        },
+        {
+          "@type": "Dentist",
+          "@id": "https://peacockdentalclinic.netlify.app/#organization",
+          "name": "Peacock Dental Clinic",
+          "url": "https://peacockdentalclinic.netlify.app/",
+          "logo": "https://peacockdentalclinic.netlify.app/logo.png"
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --white: #ffffff;
+            --primary: #2F80ED;
+            --text-primary: #1F2937;
+            --text-dark: #0F172A;
+            --primary-light: #EAF6FF;
+            --surface: #F8FCFF;
+            --text-secondary: #4B5563;
+            --border: #D6EAF8;
+            --green: #36C35D;
+            --green-light: #e8f8f0;
+            --green-dark: #2ab553;
+            --red: #E53E3E;
+            --red-light: #FFF5F5;
+            --red-dark: #C53030;
+            --orange: #ED8936;
+            --orange-light: #FFFBD5;
+            --purple: #805AD5;
+            --purple-light: #FAF5FF;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+            background: linear-gradient(180deg, #f9fcff 0%, #ffffff 100%);
+            line-height: 1.7;
+        }
+
+        img,
+        video,
+        iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .site-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid rgba(91,190,247,0.14);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .brand-link {
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .brand-logo {
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-logo img { width: 36px; height: 36px; display: block; }
+
+        .site-nav { display: none; gap: 1rem; flex-wrap: wrap; }
+        .site-nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.7rem 1rem;
+            border-radius: 999px;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        @media (min-width: 769px) {
+            .site-nav { display: flex !important; }
+        }
+        .site-nav a:hover,
+        .site-nav a.active { background: rgba(91,190,247,0.14); color: var(--primary); }
+
+        .hero { max-width: 1200px; margin: 2.5rem auto 1.5rem; padding: 0 5%; }
+        .hero-top { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; }
+        .hero-copy { max-width: 640px; }
+        .hero-copy .eyebrow {
+            display: inline-flex;
+            padding: 0.55rem 1rem;
+            background: var(--green-light);
+            border-radius: 999px;
+            color: var(--green-dark);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .hero-copy h1 {
+            font-size: clamp(2.25rem, 4vw, 3.5rem);
+            line-height: 1.05;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .hero-copy p { color: var(--text-secondary); font-size: 1rem; max-width: 580px; }
+
+        .service-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5% 3rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Cleaner service cards */
+        .service-card {
+            background: var(--white);
+            border: 1px solid rgba(54, 195, 93, 0.12);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(19,42,74,0.06);
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            min-height: 320px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .service-card .service-image {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            background: var(--green-light);
+            border-bottom: 1px solid rgba(54, 195, 93, 0.1);
+        }
+
+        .service-card .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-card .service-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            flex: 1;
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .service-card p { color: var(--text-secondary); line-height: 1.7; margin:0; font-size: 0.95rem; }
+
+        .service-card strong { color: var(--text-primary); }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(19,42,74,0.1);
+            border-color: rgba(54, 195, 93, 0.25);
+        }
+
+        /* Services section header */
+        .services-header {
+            max-width: 1200px;
+            margin: 2.5rem auto 0;
+            padding: 0 5%;
+            text-align: center;
+        }
+
+        .services-header h2 { margin: 0 0 0.5rem; font-size: clamp(1.6rem, 3vw, 2.25rem); color: var(--red); }
+        .services-header p { margin: 0 auto; max-width: 760px; color: var(--text-secondary); line-height:1.6; }
+
+        .cta-section {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            padding: 0 5%;
+        }
+
+        .cta-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            border: 1px solid rgba(54, 195, 93, 0.18);
+            background: linear-gradient(135deg, var(--green-light) 0%, var(--white) 100%);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 18px 55px rgba(19,42,74,0.06);
+        }
+
+        .cta-box h2 { margin: 0; color: var(--red); font-size: clamp(1.5rem, 2vw, 2rem); }
+        .cta-box p { margin: 0; color: var(--text-secondary); max-width: 700px; }
+        .cta-box .cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; min-width: 145px; padding: 0.95rem 1.5rem; border-radius: 999px; border: none; cursor: pointer; text-decoration: none; font-weight: 700; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .btn-primary { background: var(--green); color: #fff; box-shadow: 0 12px 30px rgba(54, 195, 93, 0.28); }
+        .btn-secondary { background: #fff; color: var(--text-primary); border: 1px solid rgba(47, 128, 237, 0.18); }
+        .btn-primary:hover, .btn-secondary:hover { transform: translateY(-2px); }
+
+        @media(max-width: 980px) { .hero-top { grid-template-columns: 1fr; } .service-grid { grid-template-columns: 1fr 1fr; } }
+        @media(max-width: 680px) { .service-grid { grid-template-columns: 1fr; } .cta-box { flex-direction: column; align-items: flex-start; } }
+    </style>
+    <style>
+    /* Fix mobile dark-mode inversion and mobile nav layout */
+    html { color-scheme: light; }
+    .site-header { background: #ffffff; }
+    .site-header, .site-header .brand-link, .site-header .brand-logo img { color: var(--text-primary); }
+    .site-nav a { color: var(--text-primary); }
+    @media (max-width: 768px) {
+      .site-nav a { display: block; padding: 0.8rem 1rem; color: var(--text-primary); background: transparent; border-radius: 8px; }
+      
+      
+    }
+    </style>
+    <style>
+    .mobile-menu-toggle { display:none; background: transparent; border:none; color:#fff; font-size:1.8rem; width:48px; height:48px; align-items:center; justify-content:center; cursor:pointer; }
+    .mobile-menu-overlay { position: fixed; inset:0; background:#050505; color:#fff; overflow-y:auto; transform: translateX(100%); transition: transform 0.3s ease; z-index:999; padding: 24px 24px 32px; display:flex; flex-direction:column; }
+    .mobile-menu-overlay.open { transform: translateX(0); }
+    .mobile-menu-close { align-self:flex-end; background:transparent; border:none; color:#fff; font-size:2.4rem; line-height:1; padding:0.4rem; cursor:pointer; }
+    .mobile-menu-brand { display:flex; align-items:center; gap:12px; margin: 14px 0 28px; }
+    .mobile-menu-brand img { width:40px; height:40px; border-radius:12px; object-fit:cover; }
+    .mobile-menu-brand span { font-size:16px; font-weight:700; letter-spacing:0.02em; color:#fff; }
+    .mobile-menu-list { display:grid; gap:18px; margin-bottom:32px; }
+    .mobile-menu-list a { font-size: 18px; color:#fff; text-decoration:none; padding: 14px 0; text-align:center; min-height:48px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid rgba(255,255,255,0.08); }
+    .mobile-menu-list a.active { border-left:4px solid #36C35D; padding-left:14px; text-align:left; border-bottom:none; }
+    .mobile-action-grid { display:grid; gap:20px; margin-bottom:28px; }
+    .mobile-action { display:block; width:100%; text-align:center; color:#fff; background:#111; border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:16px 18px; font-size:16px; text-decoration:none; min-height:56px; }
+    .mobile-action:hover { background:#161616; }
+    .mobile-social-links { display:grid; gap:16px; margin-top:auto; }
+    .mobile-social-links a { color:#fff; text-decoration:none; font-size:16px; padding:14px 0; text-align:center; border-top:1px solid rgba(255,255,255,0.08); }
+    @media (max-width: 767px) {
+      html { color-scheme: light; }
+      body { font-size:16px; line-height:1.7; }
+      .site-header { max-width:100%; padding:0 20px; height:70px; background: rgba(5,5,5,0.95); border-bottom:1px solid rgba(255,255,255,0.12); justify-content:space-between; }
+      .site-header .brand-link { color:#fff; font-size:16px; }
+      .site-header .brand-logo { width:40px; height:40px; }
+      .site-header .brand-logo img { width:40px; height:40px; }
+      .site-nav { display:none !important; }
+      .mobile-menu-toggle { display:flex; }
+      
+      .hero, .awareness-page, .contact-section, .service-grid, .container, .contact-header, .direct-reach-section, .cta-section, .why-we-matter { padding-left:20px; padding-right:20px; }
+      .hero { min-height:auto; padding-top:80px; }
+      .section { padding:60px 0; }
+      .section-title, .contact-title, .hero-copy h1, .reach-title { font-size:28px; }
+      .hero-copy h1 { font-size: clamp(2.5rem, 4vw, 3rem); }
+      .service-grid { display:grid; grid-template-columns:1fr; gap:20px; margin:0; padding:0; }
+      .service-card { width:100%; padding:20px; margin:0; border-radius:20px; }
+      .contact-card, .contact-card-phone, .contact-card-email, .contact-card-tiktok { grid-template-columns:1fr; align-items:flex-start; }
+      .contact-card-button { width:100%; margin-top:12px; }
+      .contact-actions-grid { display:grid; gap:16px; }
+      .card, .cards { grid-template-columns:1fr; }
+      .portrait { width:100%; max-width:none; }
+      .hero-right { display:none; }
+      .hero-bg, .hero-bg-image { display:none !important; }
+      .hero-bg-fallback { height:auto; background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%); }
+      .btn, .btn-primary, .btn-secondary, .mobile-action, .contact-card-button { min-height:56px; border-radius:16px; }
+      .btn { padding:16px 18px; width:100%; max-width:100%; }
+      .btn-secondary { width:100%; }
+      .mobile-menu-overlay { padding-top:24px; }
+    }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand-link">
+            <span class="brand-logo"><img src="images/logo.png" alt="Peacock Dental logo" loading="lazy" /></span>
+            Peacock Dental
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="our-doctor.html">Our Doctor</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="mobile-menu-overlay" aria-hidden="true" id="mobileMenu">
+        <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+        <div class="mobile-menu-brand">
+            <img src="images/logo.png" alt="Peacock Dental logo" loading="lazy" />
+            <span>Peacock Dental</span>
+        </div>
+        <nav class="mobile-menu-list" aria-label="Mobile Primary Menu">
+            <a href="index.html">Home</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="our-doctor.html">Our Doctor</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="mobile-action-grid">
+            <a href="contact.html#book" class="mobile-action">Book Appointment</a>
+            <a href="tel:0981555000" class="mobile-action">Call Clinic</a>
+            <a href="mailto:peacockDentalEthiopia@gmail.com" class="mobile-action">Send Message</a>
+            <a href="https://maps.app.goo.gl/SDk2iZWEWTHbcWeV6?g_st=atm" target="_blank" class="mobile-action">Google Maps</a>
+        </div>
+    </div>
+
+    <main class="hero">
+        <div class="hero-top">
+            <div class="hero-copy">
+                <span class="eyebrow">Comprehensive Dental Care</span>
+                <h1>Dental services built for comfort, confidence, and lasting results.</h1>
+                <p>Peacock Dental offers a complete range of modern dental care in Asosa, Ethiopia. Our services combine compassionate treatment, advanced technology, and skilled professionals so every visit becomes a smoother path to a healthier smile.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="services-header">
+        <h2>Our Services</h2>
+        <p>Comprehensive dental care delivered with compassion and modern techniques — from preventive checkups to specialized restorative and cosmetic treatments. Our service range is informed by the leading standards of Dr. Emibet Dental Clinic, Ethiopia's pioneer in advanced dental care.</p>
+    </section>
+
+    <section class="service-grid">
+        <article class="service-card">
+            <div class="service-image">
+                <img src="images/services/Routine exams.jpg" alt="Preventive dental care - routine checkup and cleaning" loading="lazy" />
+            </div>
+            <div class="service-content">
+                <h3>Preventive Care</h3>
+                <p>Routine exams, professional cleaning, fluoride protection, and patient education to keep your smile healthy and avoid future treatment. Following the proactive screening model used at Dr. Emibet Dental Clinic.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image">
+                <img src="images/services/Cosmetic Dentistry.jpg" alt="Cosmetic dentistry - whitening and smile design" loading="lazy" />
+            </div>
+            <div class="service-content">
+                <h3>Cosmetic Dentistry</h3>
+                <p>Whitening, smile-enhancing restorations, and aesthetic consultation to help you achieve a brighter, confident smile. Includes bleaching and veneer options modeled on leading Ethiopian cosmetic practices.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image">
+                <img src="images/services/Restorative Carw.jpg" alt="Restorative care - crowns and fillings" loading="lazy" />
+            </div>
+            <div class="service-content">
+                <h3>Restorative Care</h3>
+                <p>Fillings, crowns, bridges, and full-mouth rehabilitation designed to restore strength, function, and appearance. We use durable composite, porcelain, and zirconia materials for lasting results.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image">
+                <img src="images/services/Oral Surgery & Tooth Extraction.jpg" alt="Oral surgery and tooth extraction" loading="lazy" />
+            </div>
+            <div class="service-content">
+                <h3>Oral Surgery & Tooth Extraction</h3>
+                <p>Safe extraction, wisdom tooth removal, and surgical care with modern techniques and gentle post-operative support. From normal extractions to surgical procedures, your comfort is our priority.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image">
+                <img src="images/services/Orthodontic Treatment.jpg" alt="Orthodontic treatment - braces and aligners" loading="lazy" />
+            </div>
+            <div class="service-content">
+                <h3>Orthodontic Treatment</h3>
+                <p>Traditional braces and modern aligner solutions for patients of all ages. Improve alignment, bite, and smile confidence with personalized orthodontic planning.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image">
+                <img src="images/services/Pediatric & Family Dentistry.jpg" alt="Pediatric and family dentistry" loading="lazy" />
+            </div>
+            <div class="service-content">
+                <h3>Pediatric & Family Dentistry</h3>
+                <p>Family-friendly dental care for children and adults, with a warm clinic atmosphere and easy appointment support. Gentle approaches tailored for young patients.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image">
+                <img src="images/services/Root Canal Treatment.jpg" alt="Root canal treatment" loading="lazy" />
+            </div>
+            <div class="service-content">
+                <h3>Root Canal Treatment</h3>
+                <p>Expert endodontic care to save natural teeth from severe decay or infection. Using modern techniques for a comfortable, efficient procedure that preserves your smile.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image">
+                <img src="images/services/Dental Implants.jpg" alt="Dental implants - permanent tooth replacement" loading="lazy" />
+            </div>
+            <div class="service-content">
+                <h3>Dental Implants</h3>
+                <p>Permanent tooth replacement options that look, feel, and function like natural teeth. Includes bone graft support for ideal implant stability and long-term success.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image">
+                <img src="images/services/Deep scaling.jpg" alt="Periodontal care - gum health treatment" loading="lazy" />
+            </div>
+            <div class="service-content">
+                <h3>Periodontal Care</h3>
+                <p>Deep scaling, root planing, and gum disease treatment to protect the foundation of your smile. Preventive periodontal therapy for healthy gums and lasting oral health.</p>
+            </div>
+        </article>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-box">
+            <div>
+                <h2>Ready for a healthy, confident smile?</h2>
+                <p>Book your appointment today or reach out with any questions. Our team is here to help you feel comfortable and informed from your first visit.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:0981555000" class="btn btn-primary">Call Now</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        (function(){
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const closeBtn = document.querySelector('.mobile-menu-close');
+            const body = document.body;
+            if (!toggle || !overlay || !closeBtn) return;
+
+            const setOpen = (isOpen) => {
+                if (isOpen) {
+                    overlay.classList.add('open');
+                    overlay.setAttribute('aria-hidden', 'false');
+                    toggle.setAttribute('aria-expanded', 'true');
+                    body.style.overflow = 'hidden';
+                } else {
+                    overlay.classList.remove('open');
+                    overlay.setAttribute('aria-hidden', 'true');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    body.style.overflow = '';
+                }
+            };
+
+            toggle.addEventListener('click', () => setOpen(true));
+            closeBtn.addEventListener('click', () => setOpen(false));
+            overlay.addEventListener('click', (event) => {
+                if (event.target === overlay) setOpen(false);
+            });
+            document.querySelectorAll('.mobile-menu-list a').forEach((link) => {
+                link.addEventListener('click', () => setOpen(false));
+            });
+        })();
+    </script>
+</body>
+</html>
+
+
